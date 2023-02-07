@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-volume
+  labels:     #added string to bind pv and pvc
+    type: nfs #added string to bind pv and pvc
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    # we get this ip from: kubectl get service nfs-service cluster IP column (after service creation, check README)
+    server: 10.39.248.83
+    path: "/"
