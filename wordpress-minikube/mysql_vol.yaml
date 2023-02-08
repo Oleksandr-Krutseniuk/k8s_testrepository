@@ -2,12 +2,15 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mysql-volume-claim
+  name: my-sql-volume-claim
   labels:
     type: sql_pv
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 2Gi
+  selector: 
+    matchLabels:
+      type: sql_pv

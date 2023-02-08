@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-volume
+  name: my-sql-volume # was to nfs-volume
   labels:     #added string to bind pv and pvc
     type: sql_pv #added string to bind pv and pvc
 spec:
