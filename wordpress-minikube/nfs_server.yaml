@@ -17,7 +17,12 @@ spec:
     spec:
       containers:
       - name: nfs-server
-        image: cpuguy83/nfs-server #k8s.gcr.io/volume-nfs:0.8
+        image: k8s.gcr.io/volume-nfs:0.8
+        resources:
+            requests:
+              cpu: 20m
+            limits:
+              cpu: 100m
         ports:
           - name: nfs
             containerPort: 2049
