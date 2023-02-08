@@ -60,7 +60,7 @@ metadata:
   name: nginx-service
 spec:
   #type: NodePort
-  type: ClusterIP                 #type: LoadBalancer
+  type: LoadBalancer
   ports:
     - port: 80
       protocol: TCP
