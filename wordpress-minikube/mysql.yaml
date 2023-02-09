@@ -41,7 +41,7 @@ spec:
       volumes:
         - name: mysql-volume
           persistentVolumeClaim:
-            claimName: mysql-volume-claim
+            claimName: my-sql-volume-claim
 
 ---
 apiVersion: v1

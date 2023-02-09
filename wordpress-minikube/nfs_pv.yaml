@@ -12,5 +12,6 @@ spec:
     - ReadWriteMany
   nfs:
     # we get this ip from: kubectl get service nfs-service cluster IP column (after service creation, check README)
-    server: 10.104.224.148
+    server: 10.111.63.213
+    path: "/"
     
